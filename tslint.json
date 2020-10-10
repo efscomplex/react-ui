@@ -1,0 +1,22 @@
+{
+   "defaultSeverity": "error",
+   "env": {
+      "browser": true,
+      "es2021": true
+   },
+   "extends": [
+      "tslint:recommended"
+   ],
+   "jsRules": {},
+   "rules": {
+      "no-trailing-whitespace": false
+   },
+   "rulesDirectory": [],
+   "parserOptions": {
+      "ecmaFeatures": {
+         "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+   }
+}
