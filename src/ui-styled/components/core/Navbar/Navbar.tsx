@@ -1,6 +1,6 @@
 import React from 'react'
 import { useToggle } from '../../../hooks/index'
-import { Nav } from 'styled-ui/components/Nav/Nav'
+import { Nav } from 'ui-styled/components/Nav/Nav'
 import { Route } from '../../../types'
 import { Close, Burger as MenuIcon} from '../../../utils'
 import { menuCss, mediaFrom } from './styles'
