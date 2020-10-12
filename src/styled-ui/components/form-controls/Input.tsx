@@ -7,7 +7,7 @@ interface Props {
    [prop: string]: any;
    fancy?: string;
    label?: string;
-   expand?: boolean;
+   $expand?: boolean;
    children?: any;
    mb?: string;
 }
@@ -23,7 +23,7 @@ function Input({label, ...props}: Props) {
 
 const Label = styled('label')`
    ${cssMargins}
-   width: ${(props: any) => props.expand && '100%'};
+   width: ${(props: Props) => props.$expand ? '100%': 'max-content'};
    
    display: flex;
    align-items: flex-end;

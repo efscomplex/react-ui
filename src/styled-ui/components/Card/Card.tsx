@@ -27,11 +27,16 @@ function getCard() {
 
    return card
 }
+interface Props {
+   [prop: string]: any;
+   $grid?: boolean;
+   gap?: string;
+}
 const Wrapper = styled(getCard())`
-   padding: ${(props: any) => props.pd};
-   ${(props: any)=> props.$grid && cssGrid}
+   padding: ${(props: Props) => props.pd};
+   ${(props: Props)=> {if(props.$grid) return cssGrid}}
    & > * {
-      padding-bottom: ${(props: any)=> props.gap || '1rem'};
+      padding-bottom: ${(props: Props)=> props.gap || '1rem'};
    }
 `
 

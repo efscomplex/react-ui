@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 function CaptionCard(props: any) {
    return (
-      <Card $grid cols='max-content 1fr' {...props}>
+      <Card $grid {...props}>
          <Card.Header>
             <Heading title={config.JsxTitle}>
                <span className='caption'>Back an appointment with doctor</span>
@@ -19,4 +19,10 @@ function CaptionCard(props: any) {
    )
 }
 
-export default styled(CaptionCard)``
+export default styled(CaptionCard)`
+   grid-template-columns: 1fr;
+   justify-items: center;
+   @media(min-width: 600px){
+      grid-template-columns: max-content 1fr;
+   }
+`

@@ -1,9 +1,9 @@
 import React from 'react'
-import {Route} from '../../../types'
+import { Route } from '../../../types'
 import styled from 'styled-components'
 
 interface Props {
-   routes: Array<Route>;
+   routes: Route[];
    column: any;
    [props: string]: any;
 }
