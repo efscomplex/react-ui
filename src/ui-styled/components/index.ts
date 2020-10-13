@@ -1,4 +1,4 @@
-export * from './form-controls/Input'
+export * from './form-controls/Input/Input'
 export * from './spinners'
 export * from './Fetch/Fetch'
 export * from './core/index'

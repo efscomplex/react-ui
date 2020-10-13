@@ -1,33 +1,31 @@
 import React from 'react'
-import { useToggle } from '../../../hooks/index'
-import { Nav } from 'ui-styled/components/Nav/Nav'
-import { Route } from '../../../types'
-import { Close, Burger as MenuIcon} from '../../../utils'
+import styled, { css } from 'styled-components/macro'
+
+import { useToggle } from 'ui-styled/hooks/index'
+import { Nav } from 'ui-styled/components'
+import { Route } from 'ui-styled/types'
+import { Close, Burger } from 'ui-styled/utils'
+
 import { menuCss, mediaFrom } from './styles'
-import styled from 'styled-components/macro'
-import { styledWrap } from '../../../resources'
 
 interface Props {
    [prop: string]: any;
    routes: Route[];
-   burger?: any;
 }
 
-const menuIcon = ({onClick}: any) =>
-   <MenuIcon className='material-icons' onClick={onClick}>
-      menu
-   </MenuIcon>
-
-function Navbar({ routes, burger = menuIcon }: Props) {
+function Navbar({ routes }: Props) {
    const {
       state: showMenu,
       toggle: toggleMenu } = useToggle()
-   const Burger = styledWrap(burger)
+   
+   const cssNav = showMenu
+      ? menuCss
+      : css `display: none;`
 
    return (
       <Wrap>
          <Burger onClick={toggleMenu} show={!showMenu} css={mediaFrom}/>
-         <Nav routes={routes} css={showMenu ? menuCss : 'display: none;'}>
+         <Nav routes={routes} stcyle={cssNav}>
             {showMenu && <Close onClick={toggleMenu} children='x'/>}
          </Nav>
       </Wrap>
