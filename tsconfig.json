@@ -1,4 +1,6 @@
 {
+   "editor": "code",
+   "browser": "none",
 	"compilerOptions": {
 		"baseUrl": "./src",
 		"target": "esnext",

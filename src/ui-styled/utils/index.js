@@ -1,7 +1,0 @@
-export * from './Inline'
-export * from './Text'
-export * from './Burger'
-export * from './Img'
-export * from './List'
-export * from './Close/Close'
-export * from './Heading/Heading'
